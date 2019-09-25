@@ -34,7 +34,7 @@ h3 {
 	color: #FFF;
 	text-align: left;
 	position: relative;
-	bottom:7px;
+	bottom: 7px;
 }
 
 p {
@@ -311,9 +311,8 @@ button:hover {
 .sidenav .closebtn {
 	position: absolute;
 	top: 0;
-	right: 25px;
+	right: 15px;
 	font-size: 36px;
-	margin-left: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -387,9 +386,9 @@ button:hover {
 	.sidenav {
 		padding-top: 15px;
 	}
+	*/
 
 	.sidenav a {
-		font-size: 100%;
+		font-size: 120%;
 	}
-	*/
 }
