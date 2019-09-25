@@ -32,10 +32,10 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">2019.09.22 Bella@Princeton</a>
+        <a href="#" onclick="displayImages('2019.09.22 Bella@Princeton')">2019.09.22 Bella@Princeton</a>
         <a href="#">2019.09.22 Annaliese@Temple</a>
         <a href="#">2019.08.24 Bella@Springfield</a>
-        <a href="#">Video Editing</a>
+        <a href="#" onclick="displayImages('Video Editing Projects')">Video Editing Projects</a>
     </div>
 
     <header>
@@ -46,38 +46,64 @@
     <script>
         function openNav() {
             var width = $(window).width();
-            if (width <= 768) {
-                document.getElementById("mySidenav").style.width = width + "px";
-            }
-
-            else {
-                document.getElementById("mySidenav").style.width = "350px";
-            }
+            document.getElementById("mySidenav").style.width = width <= 768 ? width + "px" : "350px";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
+        function displayImages(id) {
+            const array = ["2019.09.22 Bella@Princeton", "Video Editing Projects"];
+            array.forEach(function (item, index) { document.getElementById(item).style.display = "none"; });
+            document.getElementById(id).style.display = "block";
+            closeNav();
+        }
     </script>
 
-    <section class="one-third-portfolio">
-        <a href="img/minhvu.jpg" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
-    <section class="one-third-portfolio">
-        <a href="img/minhvu.jpg" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
-    <section class="one-third-portfolio">
-        <a href="img/minhvu.jpg" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
-    <section class="one-third-portfolio">
-        <a href="img/minhvu.jpg" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
-    <section class="one-third-portfolio">
-        <a href="img/minhvu.jpg" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
-    <section class="one-third-portfolio">
-        <a href="vid/BACK.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
-    </section>
+    <div id="2019.09.22 Bella@Princeton">
+        <section class="one-third-portfolio">
+            <a href="img/2019.09.22 Bella@Princeton/DSCF3456-2.jpg" target="_blank">
+                <img src="img/2019.09.22 Bella@Princeton/DSCF3456.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="img/2019.09.22 Bella@Princeton/DSCF3467-2.jpg" target="_blank">
+                <img src="img/2019.09.22 Bella@Princeton/DSCF3467.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="img/2019.09.22 Bella@Princeton/DSCF3505-2.jpg" target="_blank">
+                <img src="img/2019.09.22 Bella@Princeton/DSCF3505.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="img/2019.09.22 Bella@Princeton/DSCF3507-2.jpg" target="_blank">
+                <img src="img/2019.09.22 Bella@Princeton/DSCF3507.jpg"></a>
+        </section>
+    </div>
+
+    <div id="Video Editing Projects">
+        <section class="one-third-portfolio">
+            <a href="vid/200.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="vid/NEW CHOPPA.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="vid/BACK.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="vid/STUTTER.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
+        </section>
+        <section class="one-third-portfolio">
+            <a href="vid/ROCK AND ROLL.mp4" target="_blank"><img src="img/minhvu.jpg"></a>
+        </section>
+    </div>
+
+    <!-- Template
+        <section class="one-third-portfolio">
+            <a href="img/" target="_blank">
+                <img src="img/.jpg"></a>
+        </section>
+    -->
 
     <div class="clearfix"></div>
 

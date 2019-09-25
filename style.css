@@ -64,11 +64,13 @@ img {
 	top: 0;
 }
 
+/* Ensure that title text is centered */
 .intro .inner {
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
 	max-width: none;
+	text-align: center;
 }
 
 .inner {
@@ -76,6 +78,7 @@ img {
 	margin: auto;
 	font-size: 170%;
 	line-height: 160%;
+	text-align: center;
 }
 
 .content {
@@ -169,9 +172,13 @@ nav:hover ul {
 
 .one-third-portfolio {
 	width: 29.333333%;
-	padding: 2%;
 	float: left;
 	text-align: center;
+	padding: 2%;
+}
+
+.one-third-portfolio img {
+	transition: opacity .3s ease;
 }
 
 .one-third-portfolio img:hover {
